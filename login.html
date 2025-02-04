@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - Vamos</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            margin: 0;
+        }
+        .login-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            text-align: center;
+            width: 350px;
+            backdrop-filter: blur(10px);
+        }
+        .logo {
+            font-size: 40px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+        }
+        input:focus {
+            border: 2px solid #ffffff;
+        }
+        button {
+            background-color: #ff7f50;
+            color: white;
+            padding: 12px;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #ff4500;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">Vamos</div>
+        <h2 style="color: white;">تسجيل الدخول</h2>
+        <input type="text" placeholder="اسم المستخدم" id="username" value="admin">
+        <input type="password" placeholder="كلمة المرور" id="password" value="1234">
+        <button onclick="login()">تسجيل الدخول</button>
+    </div>
+    
+    <script>
+        function login() {
+            let user = document.getElementById("username").value;
+            let pass = document.getElementById("password").value;
+            
+            const fixedUser = "admin";
+            const fixedPass = "1234";
+            
+            if (user === fixedUser && pass === fixedPass) {
+                alert("تم تسجيل الدخول بنجاح!");
+                window.location.href = "dashboard.html"; // تغيير الصفحة بعد تسجيل الدخول
+            } else {
+                alert("بيانات غير صحيحة، حاول مرة أخرى.");
+            }
+        }
+    </script>
+</body>
+</html>
