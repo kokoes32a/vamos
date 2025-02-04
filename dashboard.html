@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - Vamos</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #ff7f50;
+        }
+        td {
+            background-color: #2a5298;
+        }
+        button {
+            background-color: #ff4500;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>لوحة التحكم</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>اسم العميل</th>
+                <th>وقت الدخول</th>
+                <th>وقت الخروج</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>عميل 1</td>
+                <td>2025-02-04 12:00</td>
+                <td>2025-02-04 15:00</td>
+            </tr>
+            <tr>
+                <td>عميل 2</td>
+                <td>2025-02-04 13:00</td>
+                <td>2025-02-04 16:00</td>
+            </tr>
+            <!-- يمكنك إضافة المزيد من العملاء هنا -->
+        </tbody>
+    </table>
+
+    <button onclick="logout()">تسجيل الخروج</button>
+
+    <script>
+        function logout() {
+            window.location.href = "login.html"; // العودة لصفحة تسجيل الدخول
+        }
+    </script>
+</body>
+</html>
